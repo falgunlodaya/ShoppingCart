@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>admin login</title>
+</head>
+<style type="text/css">
+h3 {
+    background-color: ;
+    text-align: center;
+    font-family: "Arial", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+}
+
+body {
+    border-radius: 5px;
+    background-color: #75a3a3;
+    padding: 20px;
+    font-family: "Arial", Times, serif;
+}
+
+.cont1,.cont2 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 40%;
+    width: 40%;
+    margin-left: 30%;
+    box-shadow: 10px 10px 10px;
+}
+
+input[type=submit] {
+    width: 41%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px 8px 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=text]
+ {
+    width: 65%;
+    padding: 12px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password]
+ {
+    width: 65%;
+    padding: 12px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email]
+ {
+    width: 65%;
+    padding: 12px 20px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+h5 {
+    font-size: 20px;
+    cursor: pointer;
+    font-family: cursive;
+}
+.cont2{display: none;}
+label{font-size: 20px;vertical-align: middle;width: 100px;float: left}
+form>.form-control{
+	margin:8px;
+}
+</style>
+
+<body>
+    <h3>Hey Welcome!!!</h3>
+    <div class="cont1">
+        <center>
+            <form action="admi_check.php" method="post">
+            	<div class="form-control">
+                	<label>Username:</label>
+                	<input type="text" name="uname" required>
+                </div>
+                <div class="form-control">
+                	<label>Password:</label>
+                	<input type="password" name="pwd" required>
+                </div>
+                <div class="form-control">
+                	<input type="submit" name="submit" value="submit">
+                </div>
+
+                <h5 id="newuser">New user click here!!</h5>
+            </form>
+        </center>
+    </div>
+    <div class="cont2">
+        <center>
+            <form action="user registration.php" method="post">
+            	<div class="form-control">
+                	<label>firstname:</label>
+                	<input type="text" name="fname" required>
+                </div>
+                <div class="form-control">
+                	<label>lastname:</label>
+                	<input type="text" name="lname" required>
+                </div>
+                <div class="form-control">
+                	<label>Emailid:</label>
+                	<input type="email" name="email" required>
+                </div>
+                <div class="form-control">
+                	<label>phone no:</label>
+                	<input type="text" name="phone"required>
+                </div>
+                <div class="form-control">
+                	<label>Address:</label>
+                	<input type="text" name="Address" required>
+                </div>
+                <div class="form-control">
+                	<label>Password:</label>
+                	<input type="password" name="pwd" required>
+                </div>
+                <div class="form-control">
+                	<input type="submit" name="submit" value="submit">
+                </div>
+                <h5 id="user"> Already have account[?]</h5>
+            </form>
+        </center>
+    </div>
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#newuser').click(function() {
+            $('.cont1').hide();
+            $('.cont2').show();
+
+        });
+        $('#user').click(function()
+        {
+        	$('.cont2').hide();
+        	$('.cont1').show();
+        });
+
+    });
+    </script>
+</body>
+
+</html>

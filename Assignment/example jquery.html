@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+</head>
+<body>
+<span id="a" title="hi all ">span element</span>
+<div></div>
+<img src="images/1.jpg">
+<script src="jquery-3.1.1.js"></script>
+
+<script>
+	$(document).ready(function() 
+	{
+		$('span').attr({"title":"hi"});
+		var x=$('span').attr('title');
+		$('div').text(x);
+		$('img').attr({src:"images/2.jpg",title:"mi redmi prime"});
+	});
+
+
+
+
+</script>
+
+</body>
+</html>

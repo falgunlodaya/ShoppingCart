@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>registration</title>
+	</head>
+		<style type="text/css">
+		h3{
+			background-color:;
+			text-align: center;
+			font-family: "Times New Roman", Times, serif;
+			font-style: italic;
+			font-size: 30px;
+
+
+		}
+		
+	body {
+    		border-radius: 5px;
+    		background-color:#75a3a3;
+    		padding: 20px;
+		}
+		div
+		{
+			border-radius: 5px;
+    		background-color:#f2f2f2;
+    		padding: 20px;	
+    		height: 40%;
+    		width: 50%;
+    		margin-left:30%;
+    		box-shadow: 10px 10px 10px;
+		}
+		input[type=submit] 
+		{
+    		width: 41%;
+    		background-color: #4CAF50;
+    		color: white;
+    		padding: 14px 20px;
+    		margin: 8px 0px 8px 60px;
+    		border: none;
+    		border-radius: 4px;
+    		cursor: pointer;
+		}
+		input[type=submit]:hover
+		{
+   			 background-color: #45a049;
+   		} 
+
+		input[type=text],
+		 select {
+    				width: 65%;
+    				padding: 12px 20px;
+    				margin: 8px 0;
+    				display: inline-block;
+    				border: 1px solid #ccc;
+    				border-radius: 4px;
+    				box-sizing: border-box;
+					font-size:15px;
+				}
+				input[type=password], 
+				select {
+   						 width: 65%;
+    					padding: 12px 20px;
+					    margin: 8px 0;
+    					display: inline-block;
+    					border: 1px solid #ccc;
+    					border-radius: 4px;
+    					box-sizing: border-box;
+						}
+						
+				input[type=email],
+				select {
+    				width: 65%;
+    				padding: 12px 20px;
+    				margin: 8px 0;
+    				display: inline-block;
+    				border: 1px solid #ccc;
+    				border-radius: 4px;
+    				box-sizing: border-box;
+				}
+
+		
+	</style>
+<body>
+<h3>Hey Welcome!!!</h3>
+<div>
+<center>
+	<form action="" method="post">
+		<label style="font-size: 25px;">Username:</label>
+			<input type="text" name="uname"><br>
+			
+		<label style="font-size:25px;">Email:</label>
+			<input type="email" name="email"id="email"><br>
+			
+			<label style="font-size: 25px;">password:</label>
+			<input type="password" name="pwd" id="pwd"><br>
+			
+		<label style="font-size: 25px;">Confirm Password:</label>
+			<input type="password" name="cpwd"id="cpwd"><br>
+			
+			<input type="submit" name="submit" value="submit">
+
+	</form>
+	</center>
+</div>	
+<script src="jquery-3.1.1.js"></script>
+
+<script>
+	$(document).ready(function() 
+	{
+		$('#cpwd').blur(function()
+		{ 
+			var cpassd =$(this).val();
+			
+			var pd =$('#pwd').val();
+	
+			
+			if(pd!==cpassd)
+			{
+				alert("password does not match");
+			}
+
+		});
+		$('#email').blur(function()
+			{
+				var em=$(this).val
+				alert(em);
+			
+			
+			
+			
+			
+			});
+	});
+
+</script>
+
+</body>
+</html>							

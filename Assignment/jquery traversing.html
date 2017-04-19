@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traversing</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><input type="text" name="" class="c"></td>
+			<td><input type="text" name=""></td>
+			<td><input type="text" name=""></td>
+
+		</tr>
+
+		<tr>
+			<td><input type="text" name="" class="c"></td>
+			<td><input type="text" name=""></td>
+			<td><input type="text" name=""></td>
+
+		</tr>
+
+		<tr>
+			<td><input type="text" name="" class="c"></td>
+			<td><input type="text" name=""></td>
+			<td><input type="text" name=""></td>
+
+		</tr>
+
+
+	</table>
+
+<script src="jquery-3.1.1.js"></script>
+
+<script>
+
+	$(document).ready(function()	
+	{
+		$('.c').blur(function()
+			{
+			var a=$(this).val();
+			
+			var b=$(this).parent().next().find('input').val(a*2);
+			
+			var q=$(this).parent().siblings().children(':last').val(a*3);
+			
+				
+			});
+
+	});
+	
+</script>
+
+
+</body>
+</html>

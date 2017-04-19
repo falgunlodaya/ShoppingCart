@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loginjquery</title>
+</head>
+<body>
+<script src="jquery-3.1.1.js"></script>
+
+<script>
+	$(document).ready(function() 
+	{
+		D=$('<div/>').attr('id','contain').css({"border-radius":"5px","background-color":"#f2f2f2","padding":"20px","height":"40%","width":"40%","margin-left":"30%","box-shadow": "10px 10px 10px"}).appendTo('body');
+
+		uname=$('<label/>').text("Username:").appendTo('#contain');
+		I=$('<input/></br></br>').attr({"type":"text","name":"uname"}).css({"width": "65%","padding":"12px 20px",
+    				"margin": "8px 0","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain');
+
+		email=$('<label/>').text("Email:").appendTo('#contain');
+		E=$('<input/></br></br>').attr({"type":"email","name":"email"}).css({"width": "65%","padding":"12px 20px",
+    				"margin": "8px 26px","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain');
+
+		mob=$('<label/>').text("Mobile:").appendTo('#contain');
+		M=$('<input/></br></br>').attr({"type":"number","name":"mobile"}).css({"width": "65%","padding":"12px 20px","margin": "8px 21px","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain');
+
+		pwd=$('<label/>').text("Password:").appendTo('#contain');
+		P=$('<input/></br></br>').attr({"type":"text","name":"pwd"}).css({"width": "65%","padding":"12px 20px",
+    				"margin": "8px 0","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain');
+
+
+		S=$('<input/>').attr({"type":"submit","name":"submit","value":"submit"}).css({"width": "41%",
+    		"background-color": "#4CAF50","color": "white","padding":"14px 20px","margin": "8px 0px 8px 123px","border":"none","border-radius": "4px","cursor": "pointer"}).appendTo('#contain');
+
+		LOG=$('<p/>').text("Already login login here").attr("id","para").appendTo('#contain');
+
+
+
+		DE2=$('<div/>').attr('id','contain2').css({"border-radius":"5px","background-color":"#f2f2f2","padding":"20px","height":"40%","width":"40%","margin-left":"30%","box-shadow": "10px 10px 10px", "display":"none"}).appendTo('body');
+
+		uname1=$('<label/>').text("Username:").appendTo('#contain2');
+		I=$('<input/></br></br>').attr({"type":"text","name":"uname"}).css({"width": "65%","padding":"12px 20px",
+    				"margin": "8px 0","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain2');
+
+		pwd=$('<label/>').text("Password:").appendTo('#contain2');
+		P=$('<input/></br></br>').attr({"type":"text","name":"pwd"}).css({"width": "65%","padding":"12px 20px",
+    				"margin": "8px 0","display": "inline-block","border": "1px solid #ccc",
+    				"border-radius": "4px","box-sizing": "border-box"}).appendTo('#contain2');
+
+		S1=$('<input/>').attr({"type":"submit","name":"submit","value":"submit"}).css({"width": "41%",
+    		"background-color": "#4CAF50","color": "white","padding":"14px 20px","margin": "8px 0px 8px 123px","border":"none","border-radius": "4px","cursor": "pointer"}).appendTo('#contain2');
+
+		LOG1=$('<p/>').text("New user create here").attr("id","para1").appendTo('#contain2');
+
+
+
+
+
+
+
+
+		$('#para').click(function()
+			{
+				$('#contain').css('display','none');
+				$('#contain2').css('display','block');
+			});
+
+		$('#para1').click(function()
+			{
+				$('#contain2').css('display','none');
+				$('#contain').css('display','block');
+
+
+
+
+			});
+
+
+
+
+
+
+
+
+
+
+	});
+	</script>
+
+</body>
+</html>

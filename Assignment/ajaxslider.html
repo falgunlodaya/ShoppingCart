@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slider</title>
+</head>
+<body>
+	<script src="jquery-3.1.1.js"></script>
+		<script>
+			$(document).ready(function() 
+				{
+					cont=document.createElement('div');
+					abc=document.createElement('input');
+					$(abc).attr();
+					$(cont).css({'overflow':'hidden','height':'150px','width':'200px'});
+					D=document.createElement('div');
+					$(D).css('width','600px')
+					var source=['images/1.jpg','images/2.jpg','images/cam1.jpg'];
+					for(i=0;i<source.length;i++)
+					{
+					
+					M=document.createElement('img');
+					$(M).attr('src',source[i]).css({"height":"150px","width":"200px","background-color":"yellow","float":"left"});
+					$(D).append(M);	
+					$(cont).append(D);
+					}
+					$('body').append(cont);
+			
+				});
+
+		</script>
+
+</body>
+</html>

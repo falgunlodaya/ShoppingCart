@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex2</title>
+	<style>
+		.a
+		{ 
+			background-color: blue;
+			color:red;
+
+		}
+		.b
+		{
+			color:green;
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+<ul>
+	<li class="x">cofee</li>
+	<li class="x">milk</li>
+	<li class="x">tea</li>
+	<li class="x">lemon tea</li>
+</ul>
+<script src="jquery-3.1.1.js"></script>
+<script>
+	$(document).ready(function()
+	{
+			/*$('li').filter('.x').addClass("a");
+			$('li').filter('.y').addClass("b");
+			$('li').filter('.z').addClass("a");
+			$('li').filter('.w').addClass("b");*/
+			$('.x').click(function()
+			{
+				$(this).toggle("slow");
+
+			});
+
+
+
+	});
+	</script>
+</body>
+</html>

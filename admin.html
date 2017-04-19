@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin pannel</title>
+	</head>
+	<style type="text/css">
+		div
+			{
+				border-radius: 5px;
+    			background-color:#f2f2f2;
+    			padding: 20px;	
+    			height:452px;
+    			width: 39%;
+    			margin-left: 410px;
+    			box-shadow: 10px 10px 10px;
+
+			}
+		body
+			{
+				background-color:#45B8AC;
+
+			}	
+			h1
+			{
+				text-align: center;
+
+			}
+			td
+			{
+				font-size: 20;
+
+			}
+			input[type=text],
+		 select {
+    				width: 65%;
+    				padding: 12px 20px;
+    				margin: 5px 0;
+    				display: inline-block;
+    				border: 1px solid #ccc;
+    				border-radius: 4px;
+    				box-sizing: border-box;
+				}
+				input[type=file],
+		 select {
+    				width: 65%;
+    				padding: 12px 20px;
+    				margin: 5px 0;
+    				display: inline-block;
+    			}
+    			textarea
+    			{
+    				width: 65%;
+    				padding: 12px 20px;
+    				margin: 5px 0;
+    				display: inline-block;
+
+    			}
+    			
+	</style>
+	
+<body>
+
+	<header>
+		<h1>Bechh Dalo!!!</h1>
+	</header>
+<div>
+	<form action="uploads.php" method="post" name="myForm" id="myForm" enctype="multipart/form-data">
+		<fieldset>
+			<legend style="font-size: 20px;font-family:serif;">Admin panel</legend>
+				<table>
+					<tr><td>Product name:</td>
+					<td><input type="text" id="name" name="name"/></td></tr>
+
+					<tr><td>Product type:</td>
+					<td><select id="product"  name="product" onchange="demo(this.value)">
+					<option value="mobile">Mobile</option>
+					<option value="camera">Camera</option>
+					<option value="laptop">Laptop</option>
+					<option value="clothes">clothes</option>
+					</select></td></tr>
+
+			<tr><td>Brand Type:</td>
+			<td><select name="brand" id="brand">
+				<option value="mobile">Apple</option>
+				<option value="camera">Samsung</option>
+				<option value="laptop">Asus</option>
+				<option value="clothes">Lenovo</option>
+				</select></td></tr>
+
+			<tr><td>upload image:</td>
+			<td><input type="file" id="file" name="file"></td></tr>
+			<tr><td>Product Desc: </td>
+			<td><textarea rows="4" cols="50" name="desc" id="desc"></textarea></td></tr>
+
+			<tr><td>Cost:</td>
+			<td><input type="number" id="cost" name="cost" min="0"/></td></tr>
+
+				<tr><td><input type="submit" value="Add Product" style="background-color:#ff9999;border-radius:1px;color: black;padding: 14px 20px;margin-left: 10px;"></td>
+				<td><input type="reset" name="configreset" value="Reset" style="background-color: #ff9999;border-radius:1px;color:black;padding: 14px 20px; "></td></tr>
+			</table>
+
+		</fieldset>
+	</form>
+</div>
+<script type="text/javascript">
+	function demo(b)
+	{		
+		var producttype=document.getElementById('product').innerHTML;
+		var brandtype=document.getElementById('brand').innerHTML;
+		var Mobile="<option>Apple</option><option>Samsung</option><option>Asus</option><option>lenovo</option>";
+		var camera="<option>Nikon</option><option>Samsung</option><option>kodak</option><option>panasonic</option>";
+		var Laptop="<option>sony</option><option>Samsung</option><option>Dell</option><option>Hp</option>";
+		var clothes="<option>Levis</option><option>Scullers</option><option>wrangler</option><option>PeterEngland</option>";
+		if(b=='camera')
+		{
+			document.getElementById('brand').innerHTML=camera;
+		}
+			else if(b=='mobile')
+			{
+				document.getElementById('brand').innerHTML=Mobile;
+			}
+				else if(b=='laptop')
+				{
+					document.getElementById('brand').innerHTML=Laptop;
+				}
+				else if(b=='clothes')
+				{
+					document.getElementById('brand').innerHTML=clothes;
+				}
+	}
+</script>
+</body>
+</html>

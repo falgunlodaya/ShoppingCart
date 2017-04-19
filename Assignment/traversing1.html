@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traversing1</title>
+</head>
+<body>
+<div>
+	<div>
+		<div>
+			<span class='q'></span>
+		</div>
+	</div>
+</div>
+
+<div>
+	<span>
+		<ul>
+			<li></li>
+			<li></li>
+			<li><input type="text" name=""></li>
+			<li><input type="text" name=""></li>
+			<li></li>
+		</ul>
+	</span>
+</div>
+			
+	
+
+
+	<script src="jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function()
+			{
+				$('.q').parents().siblings().find('li:nth-child(4)>input').css({'background-color':'red'}).val("6");
+
+
+			});
+	
+	</script>
+</body>
+</html>

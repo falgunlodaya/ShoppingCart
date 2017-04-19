@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>graph</title>
+	<style type="text/css">
+	
+		.graph {     
+        	  		height: 229px;
+        	  		width:535px; 
+          			position: relative; 
+  					border-left: 5px solid black;
+  					border-bottom: 5px solid black;
+          			margin-left:53px;
+          			margin-top:30px;
+          		}
+
+
+        ul.label {
+        			list-style-type: none; 
+             		position: absolute;  
+             		padding: 0; 
+             	}
+    	.label li 
+    			{ 
+        	
+        			float:left;
+        			line-height: 28.6em;
+        			margin-left: 74px;
+        			font-family: "Times New Roman", Georgia, Serif;
+        			
+        			font-style: bold;
+
+
+
+        			
+
+			     }
+
+		ul.y-axis 
+				{
+					 list-style-type: none; position: absolute; 
+                /*
+                  positioning the ul box - the box that goes 
+                  around the list, 100, 75,... */
+                  left: -31px; 
+                  width: 10px;
+                  text-align: right;
+                  bottom: 0;
+                  margin: 0; padding: 0; 
+   				 }
+
+   		ul.y-axis li:first-child 
+   				{
+        			 height: 0px;
+			         line-height:0px;
+   				 }
+
+    	ul.y-axis li 
+    			{ 
+        			color: black;  
+        			
+        			height: 25px;
+        			line-height:50px;
+        			text-align: right;
+        			margin-top: -5px;
+    			}
+
+   		 ul.y-axis li.units
+   		 		{
+       			
+        			bottom: 110px;
+        			right: 20px;
+        			line-height: 1em;
+        			height: 0px;
+    			}
+    			.bar
+    			{
+    				width: 38px;
+					
+					margin-top: 0px;
+					display: table-cell;
+					position: relative;
+					background-color: #aeaeae;
+					vertical-align: baseline;
+					float:left;
+
+
+    			}
+    			.bargraphs
+    			{
+    				border-radius:15px 50px;
+
+;
+    				background-color: #85adad;
+;
+    				/*padding: 20px;*/	
+    				height: 350px;
+    				width: 863px;
+    				margin-left:21%;
+    				margin-top: 9%;
+    				box-shadow: 10px 10px 10px;
+    			}
+
+    			
+
+
+	
+     </style>
+	
+</head>
+<body>
+<div class="bargraphs">
+<div class="graph" style="float: left;">
+  <div style="height: 85px;background-color: blue;margin-left: 33px;margin-top: 144px;" class="bar"></div>
+       <div style="height: 56px;background-color: red;margin-top: 173px;" class="bar"></div>
+
+       <div style="height: 113px;background-color: blue;margin-left: 39px;margin-top: 116px;" class="bar"></div>
+        <div style="height: 97px;background-color: red;margin-top: 132px;" class="bar"></div>
+
+        <div style="height: 156px;background-color: blue;margin-left: 39px;margin-top: 73px;" class="bar"></div>
+         <div style="height: 135px;background-color: red;margin-top: 94px;" class="bar"></div>
+
+          <div style="height: 204px;background-color: blue;margin-left: 39px;margin-top: 25px;" class="bar"></div>
+          <div style="height: 176px;background-color: red;margin-top: 53px;" class="bar"></div>
+
+	<ul class="label"><li>2013</li><li>2014</li><li>2015</li><li>2016</li></ul>
+<ul class="y-axis"><li>600</li><br><li>500</li><br><li>400</li><br><li>300</li><br><li>200</li><br><li>100</li><br><li>0</li></ul>
+</div>
+
+<div style="float:left;margin-top: 52px;">
+<ul><li style="margin-left: 10px; list-style-type: square;color: blue;">Trained for complete career track</li><li style="margin-left: 10px;list-style-type: square;color:red;">Placed as developer</li></ul>
+</div>
+</div>
+
+</body>
+</html>

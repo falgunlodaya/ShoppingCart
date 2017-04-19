@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ex4</title>
+	</head>
+	<body>
+		<script src="jquery-3.1.1.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				var a=document.createElement('label');
+				$(a).text("Enter your name and click on button ");
+				$('body').append(a);
+				var d= document.createElement('br');
+				$('body').append(d);
+
+				//var b =document.createElement('input');
+				//$('input').attr({"type":"text","id":"fname"});
+				//$('body').append(b);
+
+				var c=document.createElement('input');
+				$('input').attr({"type":"button","value":"click me","id":"btn"});
+				$('body').append(c);
+
+						$('<div/>').attr("id","cont").css({"height":"350px","width":"350px","border":"1px solid black","background color":"red"}).appendTo('body');
+				
+				
+
+
+				$('#btn').click(function()
+				{
+					var name=$('#fname').val();
+					alert(name);
+					$('#cont').load('ex4.php',{"name":name});
+				});
+			});
+		</script>
+
+	</body>
+</html>
